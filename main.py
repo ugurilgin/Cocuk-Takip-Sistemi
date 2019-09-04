@@ -100,14 +100,14 @@ def Settings():
 
     print(dizi[0])
     isimLabel=Label(form,text="Ayarlar",bg="#050238",fg="#ffffff")
-    sesLabel=Label(form,text="Ses Kaydetme Süresi ",bg="#050238",fg="#ffffff")
-    intLabel=Label(form,text="İnternet  Geçmişi  Süresi ",bg="#050238",fg="#ffffff")
-    ekranLabel=Label(form,text="Ekran  Kaydetme Süresi ",bg="#050238",fg="#ffffff")
-    mailLabel=Label(form,text="Mail Gönderme Süresi ",bg="#050238",fg="#ffffff")
-    webLabel=Label(form,text="WebCam Kaydetme Süresi ",bg="#050238",fg="#ffffff")
-    keyLabel=Label(form,text="Tuş Kaydetme Süresi ",bg="#050238",fg="#ffffff")
-    uygLabel=Label(form,text="Uygulama İzleme Süresi ",bg="#050238",fg="#ffffff")
-    mailAdresLabel=Label(form,text="Mail Adresiniz ",bg="#050238",fg="#ffffff")
+    sesLabel=Label(form,text="Ses Kaydetme Süresi(sn) ",bg="#050238",fg="#ffffff")
+    intLabel=Label(form,text="İnternet  Geçmişi  Süresi(sn) ",bg="#050238",fg="#ffffff")
+    ekranLabel=Label(form,text="Ekran  Kaydetme Süresi(sn) ",bg="#050238",fg="#ffffff")
+    mailLabel=Label(form,text="Mail Gönderme Süresi(sn) ",bg="#050238",fg="#ffffff")
+    webLabel=Label(form,text="WebCam Kaydetme Süresi(sn) ",bg="#050238",fg="#ffffff")
+    keyLabel=Label(form,text="Tuş Kaydetme Süresi(sn) ",bg="#050238",fg="#ffffff")
+    uygLabel=Label(form,text="Uygulama İzleme Süresi(sn) ",bg="#050238",fg="#ffffff")
+    mailAdresLabel=Label(form,text="Mail Adresiniz(sn) ",bg="#050238",fg="#ffffff")
 
 
     isimLabel.place(x=20,y=20)
@@ -141,14 +141,14 @@ def Settings():
     uygText.insert(INSERT,dizi[6])
     mailAdresText.insert(INSERT,mailim)
 
-    sesText.place(x=180,y=100)
-    intText.place(x=180,y=140)
-    ekranText.place(x=180,y=180)
-    mailText.place(x=180,y=220)
-    webText.place(x=180,y=260)
-    keyText.place(x=180,y=300)
-    uygText.place(x=180,y=340)
-    mailAdresText.place(x=180,y=500)
+    sesText.place(x=183,y=100)
+    intText.place(x=183,y=140)
+    ekranText.place(x=183,y=180)
+    mailText.place(x=183,y=220)
+    webText.place(x=183,y=260)
+    keyText.place(x=183,y=300)
+    uygText.place(x=183,y=340)
+    mailAdresText.place(x=183,y=500)
 
     dosyaBut=Button(form,command=buttonKaydet,text="Kaydet",bg="#4e91d8",fg="#ffffff",width=8,height=2)
    
@@ -183,7 +183,7 @@ def mailSender():
         keystring=keydosya.read()
         keydosya.close()
     except:
-        uygstring="Keylogger Geçmişi Bulunamadı"   
+        keystring="Keylogger Geçmişi Bulunamadı"   
    
     adres="Mail/"+bugun+"/"+d[0]+"-"+d[1]+"-"+d[2]+"-"+"Mail.txt"   
     if not os.path.exists('Mail/'+bugun):
@@ -226,7 +226,8 @@ def mailListBaslangic():
     c=b.split('.')
     d=c[0].split(":")
     bugun=datetime.strftime(a,'%d %B %Y')
-    mailList(bugun)   
+    mailList(bugun)  
+    
 
 
 def mailList(tarih):
@@ -245,8 +246,11 @@ def mailList(tarih):
     klasorlerL.place(x=520,y=100)
     dosyalarL.place(x=80,y=100)
     (klasorler,dosyalar) = ayristir("Mail//")
-    (Bklasorler,Bdosyalar) = ayristir("Mail//"+tarih+"//")
-    
+    try:
+        (Bklasorler,Bdosyalar) = ayristir("Mail//"+tarih+"//")
+    except:
+        os.makedirs('Mail/'+tarih)
+        (Bklasorler,Bdosyalar) = ayristir("Mail//"+tarih+"//")
     for row in klasorler:
         klasorlerL.insert("end", row) 
 
@@ -281,7 +285,6 @@ def mailAcOnDouble(event):
 
 
 
-
 #<---WebCamden Görüntü Kaydetme--->
 def webCamSaver():
     global bugun
@@ -307,8 +310,6 @@ def webCamBaslangic():
 
 def webCamViewer(tarih):
     
-    #img=Image.open(r"D:\PyCharmProject\Çocuk Takip Sistemi\Screen\08 August 2019\2019-08-08 141050.png")
-    #img.show()
     form=Tk()
    
     form.title("Kaydedilmiş WebCam Görüntüleri")
@@ -324,7 +325,11 @@ def webCamViewer(tarih):
     klasorlerL.place(x=520,y=100)
     dosyalarL.place(x=80,y=100)
     (klasorler,dosyalar) = ayristir("WebCam//")
-    (Bklasorler,Bdosyalar) = ayristir("WebCam//"+tarih+"//")
+    try:
+        (Bklasorler,Bdosyalar) = ayristir("WebCam//"+tarih+"//")
+    except:
+        os.makedirs('WebCam/'+tarih)
+        (Bklasorler,Bdosyalar) = ayristir("WebCam//"+tarih+"//")
 
     for row in klasorler:
         klasorlerL.insert("end", row) 
@@ -490,8 +495,6 @@ def browserHistory(tarih):
     form.configure(background='#050238')
     form.wm_iconbitmap('img/iconum.ico')
     liste=Listbox(form,height=37,width=80,bg="#ffffff",fg="#000000",bd=0,highlightthickness=0)
-    #urlliste=Listbox(form,height=37,width=870,bg="#050238",fg="#f2eaea",bd=0,highlightthickness=0)
-    #urlliste.place(x=487,y=50)
     liste.place(x=60,y=100)
     a=datetime.now()
     bugun=datetime.strftime(a,'%d %B %Y')
@@ -627,6 +630,8 @@ def recordAudio():
 
 #</---Ses Kaydetme Fonksiyonunun Tanımlanması--->
 
+#<---Kaydedilen Sesler Fonksiyonunun Tanımlanması--->
+
 def soundListenerBaslangic():
     global bugun
     soundListener(bugun) 
@@ -634,8 +639,7 @@ def soundListenerBaslangic():
 
 def soundListener(tarih):
     
-    #img=Image.open(r"D:\PyCharmProject\Çocuk Takip Sistemi\Screen\08 August 2019\2019-08-08 141050.png")
-    #img.show()
+    
     form=Tk()
     
     form.title("Kaydedilmiş Sesler")
@@ -687,7 +691,9 @@ def sesAcOnDouble(event):
     winsound.PlaySound("Audio/"+bugun+"/"+value,winsound.SND_ASYNC)
     
     
-####################################################################
+#</---Kaydedilen Sesler Fonksiyonunun Tanımlanması--->
+
+#<---Ekran  Kaydededici Fonksiyonunun Tanımlanması--->
 
 def screenSaver():
 
@@ -702,6 +708,11 @@ def screenSaver():
     bitmap=autopy.bitmap.capture_screen()
     bitmap.save('Screen/'+bugun+'/'+d[0]+d[1]+d[2]+'.png')
 
+#</---Ekran  Kaydededici Fonksiyonunun Tanımlanması--->
+
+#<---Kaydedilmiş Resimlerin Görüntülenmesi Fonksiyonunun Tanımlanması--->
+
+
 def imageViewerBaslangic():
     global bugun
     imageViewer(bugun)  
@@ -709,8 +720,7 @@ def imageViewerBaslangic():
 
 def imageViewer(tarih):
     
-    #img=Image.open(r"D:\PyCharmProject\Çocuk Takip Sistemi\Screen\08 August 2019\2019-08-08 141050.png")
-    #img.show()
+    
     form=Tk()
    
     form.title("Kaydedilmiş Ekran Görüntüleri")
@@ -764,6 +774,9 @@ def resimAcOnDouble(event):
 
 
 
+#</---Kaydedilmiş Resimlerin Görüntülenmesi Fonksiyonunun Tanımlanması--->
+
+#<---Uygulama İzleme Fonksiyonunun Tanımlanması--->
 
 def uygBul():
     
@@ -803,7 +816,11 @@ def uygBul():
     if not os.path.exists('Uygulama/'+bugun):
         os.makedirs('Uygulama/'+bugun)
     for i in yenidizi:
-        if(("System" in i) or ("Registry" in i)or("Memory Compression" in i) ):
+        if(("chrome" in i) or ("opera" in i) or ("yandex" in i)  or ("safari" in i)  or ("explorer" in i) or ("firefox" in i) or ("tor" in i)  or ("browser" in i)  ):
+            dosya=open("Uygulama/"+bugun+"/appsOpen.txt", "a")
+            dosya.write(i+ " Browser açıldı İnternet Historye Bakınız \n")
+            dosya.close()
+        elif(("System" in i) or ("Registry" in i)or("Memory Compression" in i) ):
             print(i)   
         else:
            
@@ -831,24 +848,22 @@ def taskListBaslangic():
 
 
 def taskList(tarih):
-
+    try:
+        dosya=open("Uygulama/"+bugun+"/appsOpen.txt","r")
+    except:
+        dosya=open("Uygulama/"+bugun+"/appsOpen.txt","w")
+        dosya.write(" ")
+        
     form=Tk()
     form.wm_iconbitmap('img/iconum.ico')
-    form.title("Uygulama İzle")
+
+    form.title("Uygulamaları İzle")
     form.geometry('1920x800')
     form.configure(background='#050238')
     textLabel=Label(form,text="Uygulamalarım",bg="#050238",fg="#f2eaea")
-    textBox=Text(form,bg="#ffffff",fg="#000000",height=37,width=30)
+    textBox=Text(form,bg="#ffffff",fg="#000000",height=37,width=50)
     textLabel.place(x=80,y=50)
-    textBox.place(x=80,y=100)
-    
-    dosya=open("Uygulama/"+tarih+"/"+"appsOpen.txt", "r")
-    a=dosya.read()
-    textBox.insert("end",tarih+"\n")
-    textBox.insert("end",a)
-    dosya.close()
-
-    
+    textBox.place(x=60,y=100)
     dosyaLabel=Label(form,text="Dosyalar",bg="#050238",fg="#f2eaea")
     dosyalarL=Listbox(form,height=37,width=40,bg="#ffffff",fg="#000000",highlightthickness=0)
     klasorLabel=Label(form,text="Klasörler",bg="#050238",fg="#f2eaea")
@@ -866,7 +881,9 @@ def taskList(tarih):
     for item in Bdosyalar:
         dosyalarL.insert("end", item) 
     klasorlerL.bind("<Double-Button-1>",uygklasorAcOnDouble)
-    
+    textBox.insert("end",tarih+"\n")
+    textBox.insert("end",dosya.read())
+    dosya.close()
     form.mainloop()
 
 
@@ -882,6 +899,9 @@ def uygklasorAcOnDouble(event):
 
 
 
+#</---Uygulama İzleme Fonksiyonunun Tanımlanması--->
+
+#<---Keylogger Fonksiyonunun Tanımlanması--->
 
 def baslangicKeylooger():
     global bugun
@@ -932,7 +952,7 @@ def Keyloggerim():
         elif(key==Key.end):
             return False
             
-            sys.exit()
+        
     
     with Listener(on_press=on_press,on_release=on_release) as listener:
         listener.join()
@@ -943,7 +963,11 @@ def Keylogger(tarih):
     dosya=open("online.txt","w")
     dosya.write("1")
     dosya.close()
-    dosya=open("Keylogger/"+bugun+"/kaydedilenmetin.txt","r")
+    try:
+        dosya=open("Keylogger/"+bugun+"/kaydedilenmetin.txt","r")
+    except:
+        dosya=open("Keylogger/"+bugun+"/kaydedilenmetin.txt","w")
+        dosya.write(" ")
     form=Tk()
     form.wm_iconbitmap('img/iconum.ico')
 
@@ -989,7 +1013,9 @@ def keyklasorAcOnDouble(event):
 
 
 
+#</---Keylogger Fonksiyonunun Tanımlanması--->
 
+#<---İzleyici Başlat Fonksiyonunun Tanımlanması--->
 
 def izleyiciBaslat():
     global timebreak
@@ -999,10 +1025,12 @@ def izleyiciBaslat():
     dosya.close()
     sesKaydediciThread.start()
     baslangicUygThread.start()
-    #baslangicHistoryThread.start()
+    baslangicHistoryThread.start()
     zamanlayiciThread.start()
     keyloggerThread.start()
+#</---İzleyici Başlat Fonksiyonunun Tanımlanması--->
 
+#<---Anamenü Fonksiyonunun Tanımlanması--->
 
 def AnaMenu():
     
@@ -1052,6 +1080,7 @@ def AnaMenu():
 
     keyloggerBut=Button(window,text="Keylogger",image=key,bd=0,highlightthickness=0,command=baslangicKeylooger,width=168,height=162,bg="#00FF00",fg="#000000")
     keyloggerBut.place(x=740,y=80)
+    
 
     ayarBut=Button(window,text="Ayarlar",image=setting,bd=0,highlightthickness=0,command=Settings,width=168,height=162,bg="#ffffff",fg="#000000")
     ayarBut.place(x=80,y=350)
@@ -1075,8 +1104,8 @@ def AnaMenu():
     view =Label (window,image=avatar)
     view.place(x=1080,y=80,width=169,height=169)
 
-    hello =Label (window,text="Hoşgeldiniz, ",bg="#050238",fg="#ffffff")
-    hello.place(x=1080,y=300)
+    hello =Label (window,text="Hoşgeldiniz ",bg="#050238",fg="#ffffff")
+    hello.place(x=1180,y=300)
 
     mesaj =Label (window,text="\n Bu programı kullanarak siz evde yokken çocuğunuz \n bilgisayar başında neler yapıyor öğrenebilirsiniz.\n Tek yapmanız gereken ilgili buttonlara tıklamaktır.\n Çıkış için İzlemeyi Durdur",bg="#050238",fg="#ffffff")
     mesaj.place(x=1000,y=370)
@@ -1085,7 +1114,9 @@ def AnaMenu():
 
 
     window.mainloop()
+#</---Anamenü Fonksiyonunun Tanımlanması--->
 
+#<---Zamanlayıcı  Fonksiyonunun Tanımlanması--->
 
 def zamanlayiciFonk():
     x=0
@@ -1113,8 +1144,8 @@ def zamanlayiciFonk():
             webCamSaver()
         if(x%int(dizi[6])==0):
             uygBul()
-        if(x%int(dizi[3])==0):
-            mailSender()
+        #if(x%int(dizi[3])==0):
+            #mailSender()
         if(x%int(dizi[1])==0):
            bulHistory()   
         if(x%int(dizi[2])==0):
@@ -1136,7 +1167,9 @@ def zamanlayiciAudio():
         time.sleep(1)
 
 
+#</---Zamanlayıcı  Fonksiyonunun Tanımlanması--->
 
+#<---Kontrol  Fonksiyonunun Tanımlanması--->
     
 def baslangicKontrol():
     global bugun
@@ -1150,6 +1183,8 @@ def baslangicKontrol():
     return a
 #MultiThreading 
 
+#</---Kontrol  Fonksiyonunun Tanımlanması--->
+#<---MultiThreading  Fonksiyonunun Tanımlanması--->
 
 baslangicKontrol()
 baslangicUygThread=threading.Thread(target=baslangicUyg)
@@ -1170,4 +1205,4 @@ if(test=="1"):
     keyloggerThread.start()
 if(test=="0"):
     menuThread.start()
-    
+#</---MultiThreading  Fonksiyonunun Tanımlanması--->
