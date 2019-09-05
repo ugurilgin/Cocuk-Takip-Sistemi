@@ -1,15 +1,4 @@
 
-##############################################################################
-#
-#
-# Copyright (c) 2019 Uğur ILGIN <ugurilgin94@gmail.com>
-# All rights reserved.
-# Licensed under the GNU GENERAL PUBLIC LICENSE v3.0
-# (http://www.freebsd.org/copyright/freebsd-license.html)
-#
-# 
-##############################################################################
-
 #<---Gerekli kütüphanelerin eklenmesi--->
 
 from tkinter import *
