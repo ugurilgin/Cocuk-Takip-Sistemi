@@ -9,9 +9,7 @@
 # Program Kullanımı
 * Program ilk açılışta sizi görsel bir arayüz ile karşılar. Bu Arayüz üzerinden işlem yapmak istediğiniz pencereyi görüntüleyebilirsiniz.
 * ![logo](/Ekran-SS/1.png)
-* Yan Panelde açılır menümüz görüntülenmektedir.
-* Yan taraftaki menü kullanım kullanım kolaylığı sağlamak için Coğrafi Bölgelere ayrılmıştır
-* Bu Menüden istenilen Ajans seçilerek o ajansa ait güncel desteklerin listelenmesi sağlanır.
+* Ziyaret Edilen Websiteleri bu bölüm arkaplanda sisteminizde bulunan tarayıcı geçmişini kaydedip ilgili filtrelenme işlemlerinin gerçekleştirilmesi sonucu o anlık güncel internet geçmişinizin size gösterilmesini sağlar.
 *  ![logo](/Ekran-SS/2.png)
 * Listelenen desteklerden birine tıklanıldığında ise WebView içerisinde tıklanılan destek programı gösterilir.
 *  ![logo](/Ekran-SS/3.png)
