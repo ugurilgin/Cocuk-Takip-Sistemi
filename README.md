@@ -9,10 +9,11 @@
 # Program Kullanımı
 * Program ilk açılışta sizi görsel bir arayüz ile karşılar. Bu Arayüz üzerinden işlem yapmak istediğiniz pencereyi görüntüleyebilirsiniz.
 * ![logo](/Ekran-SS/1.png)
-* Ziyaret Edilen Websiteleri bu bölüm arkaplanda sisteminizde bulunan tarayıcı geçmişini kaydedip ilgili filtrelenme işlemlerinin gerçekleştirilmesi sonucu o anlık güncel internet geçmişinizin size gösterilmesini sağlar.
+* Ziyaret Edilen Websiteleri, bu bölüm arkaplanda sisteminizde bulunan tarayıcı geçmişini kaydedip ilgili filtrelenme işlemlerinin gerçekleştirilmesi sonucu o anlık güncel internet geçmişinizin size gösterilmesini sağlar.
 *  ![logo](/Ekran-SS/2.png)
-* Listelenen desteklerden birine tıklanıldığında ise WebView içerisinde tıklanılan destek programı gösterilir.
+* Kaydedilmiş Ekran Görüntüleri, bu bölüm arkaplanda anlık masaüstü ekran görüntülerini yakalayıp kaydedilme işlemini gerçekleştirilmesi sonucu o anlık güncel görüntülerin  size gösterilmesini sağlar.
 *  ![logo](/Ekran-SS/3.png)
+* Kaydedilmiş WebCam Görüntüleri, bu bölüm arkaplanda anlık webcam görüntülerini yakalayıp kaydedilme işlemini gerçekleştirilmesi sonucu o anlık güncel görüntülerin  size gösterilmesini sağlar.
 *  ![logo](/Ekran-SS/4.png)
 *  ![logo](/Ekran-SS/5.png)
 * Arama Çubuğunda ise en çok aranan verilere göre düzenlenen bir arama listesi kullanılmıştır
