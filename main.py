@@ -1146,8 +1146,8 @@ def zamanlayiciFonk():
             webCamSaver()
         if(x%int(dizi[6])==0):
             uygBul()
-        #if(x%int(dizi[3])==0):
-            #mailSender()
+        if(x%int(dizi[3])==0):
+            mailSender()
         if(x%int(dizi[1])==0):
            bulHistory()   
         if(x%int(dizi[2])==0):
