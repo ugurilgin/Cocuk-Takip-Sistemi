@@ -1,5 +1,5 @@
 
-![logo](/img/logo.png)
+![logo](/img/iconum.png)
 # Cocuk Takip Sistemi
 
 Açık Destek Takip programı sayesinde Tübitak Kosgeb Kalkınma Ajanslarından yayınlanan güncel çağırılara erişebilirsiniz.
