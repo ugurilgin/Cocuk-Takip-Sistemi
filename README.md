@@ -2,13 +2,12 @@
 ![logo](/img/iconum.png)
 # Cocuk Takip Sistemi
 
-Açık Destek Takip programı sayesinde Tübitak Kosgeb Kalkınma Ajanslarından yayınlanan güncel çağırılara erişebilirsiniz.
-Tek yapmanız gereken menüden veya arama çubuğundan istenilen programa tıklanılması yeterlidir.
+Çocuk Takip Programı, Siz evde yokken çocuğunuzun bilgisayar başında yaptıklarını görüntülemenizi ve kendinize mail gönderilmesini sağlayabileceğiniz bir bilgisayar programıdır...
 
 
 
 # Program Kullanımı
-* Program ilk açılışta Tübitaktaki güncel destekleri listeleyerek açılır. 
+* Program ilk açılışta Sizi görsel bir arayüz ile karşılar. 
 * ![logo](/Ekran-SS/1.png)
 * Yan Panelde açılır menümüz görüntülenmektedir.
 * Yan taraftaki menü kullanım kullanım kolaylığı sağlamak için Coğrafi Bölgelere ayrılmıştır
