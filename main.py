@@ -1,4 +1,17 @@
 
+##############################################################################
+#
+#
+# Copyright (c) 2019 Uğur ILGIN <ugurilgin94@gmail.com>
+# All rights reserved.
+# Licensed under the GNU GENERAL PUBLIC LICENSE v3.0
+# (http://www.freebsd.org/copyright/freebsd-license.html)
+#
+# 
+##############################################################################
+
+
+
 #<---Gerekli kütüphanelerin eklenmesi--->
 
 from tkinter import *
@@ -1096,7 +1109,7 @@ def AnaMenu():
     hello =Label (window,text="Hoşgeldiniz ",bg="#050238",fg="#ffffff")
     hello.place(x=1180,y=300)
 
-    mesaj =Label (window,text="\n Bu programı kullanarak siz evde yokken çocuğunuz \n bilgisayar başında neler yapıyor öğrenebilirsiniz.\n Tek yapmanız gereken ilgili buttonlara tıklamaktır.\n Çıkış için İzlemeyi Durdur",bg="#050238",fg="#ffffff")
+    mesaj =Label (window,text="\n Bu programı kullanarak siz evde yokken çocuğunuz \n bilgisayar başında neler yapıyor öğrenebilirsiniz.\n Tek yapmanız gereken ilgili buttonlara tıklamaktır.\n Çıkış için İzlemeyi Durdur \n Copyright (c) 2019 Uğur ILGIN ",bg="#050238",fg="#ffffff")
     mesaj.place(x=1000,y=370)
 
     
