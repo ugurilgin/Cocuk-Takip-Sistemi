@@ -1109,9 +1109,11 @@ def AnaMenu():
     hello =Label (window,text="Hoşgeldiniz ",bg="#050238",fg="#ffffff")
     hello.place(x=1180,y=300)
 
-    mesaj =Label (window,text="\n Bu programı kullanarak siz evde yokken çocuğunuz \n bilgisayar başında neler yapıyor öğrenebilirsiniz.\n Tek yapmanız gereken ilgili buttonlara tıklamaktır.\n Çıkış için İzlemeyi Durdur \n Copyright (c) 2019 Uğur ILGIN ",bg="#050238",fg="#ffffff")
+	mesaj =Label (window,text="\n Bu programı kullanarak siz evde yokken çocuğunuz \n bilgisayar başında neler yapıyor öğrenebilirsiniz.\n Tek yapmanız gereken ilgili buttonlara tıklamaktır.\n Çıkış için İzlemeyi Durdur",bg="#050238",fg="#ffffff")
     mesaj.place(x=1000,y=370)
 
+    copyright =Label (window,text=" Copyright (c) 2019 Uğur ILGIN ",bg="#050238",fg="#ffffff")
+    copyright.place(x=80,y=650)
     
 
 
