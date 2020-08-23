@@ -3,7 +3,8 @@
 # Cocuk Takip Sistemi
 
 Çocuk Takip Programı, Siz evde yokken çocuğunuzun bilgisayar başında yaptıklarını görüntülemenizi ve kendinize mail gönderilmesini sağlayabileceğiniz bir bilgisayar programıdır...
-https://www.youtube.com/watch?v=S0TBwsiONuI
+* Programın videosunu yuotube'dan izleyebilirsiniz
+[![Videoya Gözatınız](/SS/video.png)](https://www.youtube.com/watch?v=S0TBwsiONuI)
 
 
 # Program Kullanımı
