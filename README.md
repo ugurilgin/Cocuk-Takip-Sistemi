@@ -3,7 +3,7 @@
 # Cocuk Takip Sistemi
 
 Çocuk Takip Programı, Siz evde yokken çocuğunuzun bilgisayar başında yaptıklarını görüntülemenizi ve kendinize mail gönderilmesini sağlayabileceğiniz bir bilgisayar programıdır...
-
+https://www.youtube.com/watch?v=S0TBwsiONuI
 
 
 # Program Kullanımı
@@ -21,6 +21,6 @@
 *  ![logo](/Ekran-SS/8.png)
 *  ![logo](/Ekran-SS/9.png)
 
-# Copyright © 2019 Tüm Hakları Saklıdır.
+# Copyright © 2020 Tüm Hakları Saklıdır.
 * UĞUR ILGIN
 
