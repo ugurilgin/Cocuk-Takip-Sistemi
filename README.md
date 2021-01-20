@@ -1,4 +1,4 @@
-# paylaşım yapılmadan önce izin istenmesi  gerekmektedir.
+# Before sharing, permission must be requested.
 ![logo](/img/iconum.png)
 # Cocuk Takip Sistemi
 
