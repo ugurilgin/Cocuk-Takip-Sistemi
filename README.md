@@ -1,4 +1,4 @@
-
+# paylaşım yapılmadan önce izin istenmesi  gerekmektedir.
 ![logo](/img/iconum.png)
 # Cocuk Takip Sistemi
 
